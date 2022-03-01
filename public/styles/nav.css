@@ -11,15 +11,16 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 32px;
+  font-size: 24px;
+  position: absolute;
 }
 
-.header-logo {
+.nav-logo {
   font-family: 'Bungee', cursive;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
-.header-write-tweet {
+.nav-write-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 100%;
+  background-color: goldenrod;
+}
+
+.avatar {
+  justify-content: center;
+  display: flex;
+  margin-top: 120px;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
