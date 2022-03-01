@@ -32,6 +32,10 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.tweet-text-negative {
+  color: red;
+}
+
 ::placeholder {
   font-size: 24px;
   font-weight: 600;
