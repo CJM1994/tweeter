@@ -1,19 +1,21 @@
 header {
-  display: flex;
-  flex-direction: column;
   height: 400px;
   width: 100%;
   background-color: goldenrod;
+  background-image: url("https://www.transparenttextures.com/patterns/checkered-light-emboss.png");
+  display: flex;
+  flex-direction: column;
 }
 
 .avatar {
+  padding-top: 120px;
   justify-content: center;
   display: flex;
-  margin-top: 120px;
 }
 
 .name {
   display: flex;
   justify-content: center;
   color: #ffffff;
+  background: inherit;
 }
