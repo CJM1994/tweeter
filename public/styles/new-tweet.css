@@ -19,7 +19,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 20%;
   padding-top: 15px;
 }
 
@@ -28,7 +27,7 @@
   border-bottom: 10px solid #484848;
   border-radius: 5px;
   background: none;
-  width: 80%;
+  width: 100%;
   font-family: 'Source Sans Pro', sans-serif;
 }
 

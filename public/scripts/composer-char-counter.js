@@ -4,16 +4,15 @@ $(document).ready(function () {
   /*
   * Update character counter for tweet input
   */
-  $('#tweet-text').on('focus keydown', function () {
+  $('#tweet-text').on('input', function () {
 
     const remainingChars = 140 - this.value.length;
-    const display = this.parentElement.childNodes[3].childNodes[3];
-    display.value = remainingChars;
+    $(this).siblings('div').children('.counter').text(remainingChars);
 
     if (remainingChars < 0) {
-      display.classList.add('tweet-text-negative');
+      $('.counter').css('color', 'red');
     } else {
-      display.classList.remove('tweet-text-negative');
+      $('.counter').css('color', 'inherit');
     };
 
   });
