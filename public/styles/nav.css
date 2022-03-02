@@ -15,6 +15,10 @@ nav {
   position: absolute;
 }
 
+nav i {
+  color: red;
+}
+
 .nav-logo {
   font-family: 'Bungee', cursive;
   font-size: 2em;
