@@ -8,6 +8,10 @@
   margin-top: 50px;
 }
 
+.tweet:hover {
+  box-shadow: 5px 10px gray;
+}
+
 .tweet header {
   display: flex;
   height: 150px;
@@ -58,4 +62,8 @@
 
 .tweet .footer-content .icons {
   color: #4056A1;
+}
+
+.tweet i:hover {
+  color: goldenrod;
 }
