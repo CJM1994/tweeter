@@ -72,7 +72,7 @@ $(document).ready(function () {
 
   const displayError = function (error) {
     $('#error').empty();
-    $('#error').append(`Error: ${error}`);
+    $('#error').append(`❌ Error: ${error} ❌`);
     $('#error').css('display', 'inline');
   };
 
