@@ -41,7 +41,7 @@ const createTweetElement = function (tweetDataObj) {
 // Renders and parses all tweets in the DB array
 const renderTweets = function (tweetData) {
 
-  for (const Obj of tweetData) {
+  for (const Obj of tweetData.reverse()) {
     const renderTweet = createTweetElement(Obj);
     $('#tweet-container').append(renderTweet);
   }
@@ -63,6 +63,14 @@ $(document).ready(function () {
       });
   };
 
+  const addLatestTweet = function () {
+    $.ajax('/tweets', { type: 'GET' })
+      .then(function (db) {
+        const $latestTweet = createTweetElement(db[db.length - 1]);
+        $('#tweet-container').prepend($latestTweet);
+      });
+  };
+
   loadTweets();
 
   // Event-handler will submit form input as ajax request for new tweets
@@ -81,6 +89,8 @@ $(document).ready(function () {
         data: $(this).serialize()
       });
     };
+
+    addLatestTweet();
   });
 
 });
