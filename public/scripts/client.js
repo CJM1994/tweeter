@@ -4,6 +4,13 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
+const safeEscape = function (string) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(string));
+  return div.innerHTML;
+};
+
 // Takes tweet data from an object in the db and parses into html
 const createTweetElement = function (tweetDataObj) {
 
@@ -19,7 +26,7 @@ const createTweetElement = function (tweetDataObj) {
       </p>
     </header>
     <p>
-      ${tweetDataObj.content.text}
+      ${safeEscape(tweetDataObj.content.text)}
     </p>
     <footer>
       <div class="divider"></div>
