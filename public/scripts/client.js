@@ -87,10 +87,10 @@ $(document).ready(function () {
       $.ajax('/tweets', {
         type: 'POST',
         data: $(this).serialize()
-      });
+      })
+        .then(addLatestTweet);
     };
 
-    addLatestTweet();
   });
 
 });
