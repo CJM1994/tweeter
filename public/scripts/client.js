@@ -58,8 +58,7 @@ $(document).ready(function () {
         renderTweets(db);
       })
       .catch(function (error) {
-        console.log('error', error);
-        alert(`error: ${error}`);
+        displayError(error);
       });
   };
 
@@ -71,17 +70,24 @@ $(document).ready(function () {
       });
   };
 
+  const displayError = function (error) {
+    $('#error').empty();
+    $('#error').append(`Error: ${error}`);
+    $('#error').css('display', 'inline');
+  };
+
   loadTweets();
 
   // Event-handler will submit form input as ajax request for new tweets
   $('form').on('submit', function (event) {
     event.preventDefault();
+    $('#error').css('display', 'none');
 
     if (!$('form :input').val()) {
-      alert('Warning: No Message Entered');
+      displayError('No Message Entered');
     }
     else if (!$('form :input').val() || $('form :input').val().length > 140) {
-      alert('Warning: Message Over Limit');
+      displayError('Message Over Limit');
     }
     else {
       $.ajax('/tweets', {
@@ -90,8 +96,7 @@ $(document).ready(function () {
       })
         .then(addLatestTweet)
         .catch(function (error) {
-          console.log('error', error);
-          alert(`error: ${error}`);
+          displayError(error);
         });
     };
 
