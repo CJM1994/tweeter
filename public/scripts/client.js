@@ -4,31 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-tweetData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1646017258735
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1646103658735
-  }
-]
-
+// Takes tweet data from an object in the db and parses into html
 const createTweetElement = function (tweetDataObj) {
 
   let tweetElement = `
@@ -62,6 +38,7 @@ const createTweetElement = function (tweetDataObj) {
   return tweetElement;
 };
 
+// Renders and parses all tweets in the DB array
 const renderTweets = function (tweetData) {
 
   for (const Obj of tweetData) {
@@ -71,6 +48,39 @@ const renderTweets = function (tweetData) {
 
 };
 
+// Start of function calls
 $(document).ready(function () {
-  renderTweets(tweetData);
-})
+
+  // Sends get request to /tweets and displays them on page
+  const loadTweets = function () {
+    $.ajax('/tweets', { type: 'GET' })
+      .then(function (db) {
+        renderTweets(db);
+      })
+      .catch(function (error) {
+        console.log('error', error);
+        alert(`error: ${error}`);
+      });
+  };
+
+  loadTweets();
+
+  // Event-handler will submit form input as ajax request for new tweets
+  $('form').on('submit', function (event) {
+    event.preventDefault();
+
+    if (!$('form :input').val()) {
+      alert('Warning: No Message Entered');
+    }
+    else if (!$('form :input').val() || $('form :input').val().length > 140) {
+      alert('Warning: Message Over Limit');
+    }
+    else {
+      $.ajax('/tweets', {
+        type: 'POST',
+        data: $(this).serialize()
+      });
+    };
+  });
+
+});
