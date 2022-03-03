@@ -5,7 +5,7 @@
  */
 
 
-const safeEscape = function (string) {
+const safeText = function (string) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(string));
   return div.innerHTML;
@@ -26,7 +26,7 @@ const createTweetElement = function (tweetDataObj) {
       </p>
     </header>
     <p>
-      ${safeEscape(tweetDataObj.content.text)}
+      ${safeText(tweetDataObj.content.text)}
     </p>
     <footer>
       <div class="divider"></div>
