@@ -88,7 +88,11 @@ $(document).ready(function () {
         type: 'POST',
         data: $(this).serialize()
       })
-        .then(addLatestTweet);
+        .then(addLatestTweet)
+        .catch(function (error) {
+          console.log('error', error);
+          alert(`error: ${error}`);
+        });
     };
 
   });

@@ -30,3 +30,11 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .error {
+   color: red;
+   border: 5px solid red;
+   background-color: pink;
+   font-weight: 600;
+   display: none;
+ }
