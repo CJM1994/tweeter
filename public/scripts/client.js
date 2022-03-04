@@ -105,6 +105,7 @@ $(document).ready(function () {
         type: 'POST',
         data: $(this).serialize()
       })
+        .then($('form :input').val(''))
         .then(addLatestTweet)
         .catch(function (error) {
           displayError(error);
