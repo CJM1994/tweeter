@@ -106,7 +106,16 @@ $(document).ready(function () {
           displayError(error);
         });
     };
-
   });
 
+  // Event-handler for form toggle button on top of page
+  $('#toggle').on('click', function (event) {
+
+    if ($('.new-tweet').css('display') === 'none') {
+      $('.new-tweet').slideDown(400);
+    } else {
+      $('.new-tweet').slideUp(400);
+    }
+
+  });
 });
