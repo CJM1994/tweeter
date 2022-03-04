@@ -38,6 +38,8 @@ main {
    font-weight: 600;
    display: none;
    padding: 10px;
+   position: fixed;
+   top: 75%;
  }
 
  @media screen and (min-width: 1024px) {
