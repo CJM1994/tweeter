@@ -4,39 +4,34 @@
   margin: auto;
   font-weight: 600;
   color: #484848;
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
 }
-
 .new-tweet button {
   background-color: #4056A1;
   color: white;
   border-radius: 5px;
-  border-color: #ffffff;
+  border-color: #484848;
   border-width: 5px;
 }
-
-.input-addons {
+.new-tweet .input-addons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
 }
-
-#tweet-text {
+.new-tweet #tweet-text {
   border: none;
   border-bottom: 10px solid #484848;
   border-radius: 5px;
   background: none;
   width: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
-
-::placeholder {
+.new-tweet ::placeholder {
   font-size: 24px;
   font-weight: 600;
   color: #484848;
 }
-
-input:focus {
+.new-tweet input:focus {
   outline: none;
 }

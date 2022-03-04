@@ -1,7 +1,9 @@
+@import 'colors';
+
 body > header {
   height: 400px;
   width: 100%;
-  background-color: goldenrod;
+  background-color: $secondary-color;
   background-image: url("https://www.transparenttextures.com/patterns/checkered-light-emboss.png");
   display: flex;
   flex-direction: column;
@@ -16,11 +18,12 @@ body > header {
 .name {
   display: flex;
   justify-content: center;
-  color: white;
+  color: $header-text-color;
   background: inherit;
 }
 
 @media screen and (min-width: 1024px) {
+
   body > header {
     position: fixed;
     width: 33.3%;
@@ -28,4 +31,5 @@ body > header {
     margin-left: 40px;
     margin-top: 170px;
   }
+
 }

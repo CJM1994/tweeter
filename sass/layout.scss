@@ -3,10 +3,12 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+ @import 'colors', 'fonts';
+
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,11 +16,12 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
-  color: #484848;
-  background-color: #f4f1ec;
+  color: $tweet-color;
+  background-color: $background-color;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $minor-font;
 }
 
 main {
@@ -30,21 +33,24 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-#error {
-  color: red;
-  border: 5px solid red;
-  background-color: pink;
-  font-weight: 600;
-  display: none;
-  padding: 10px;
-  position: fixed;
-  top: 75%;
-}
 
-@media screen and (min-width: 1024px) {
+ #error {
+   color: red;
+   border: 5px solid red;
+   background-color: pink;
+   font-weight: 600;
+   display: none;
+   padding: 10px;
+   position: fixed;
+   top: 75%;
+ }
+
+ @media screen and (min-width: 1024px) {
+
   .container {
     width: 66.7%;
     float: right;
     padding: 0px 75px;
   }
-}
+
+ }
