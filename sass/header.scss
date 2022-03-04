@@ -1,12 +1,11 @@
-@import 'colors';
+@import 'colors', 'mixins';
 
 body > header {
   height: 400px;
   width: 100%;
   background-color: $secondary-color;
   background-image: url("https://www.transparenttextures.com/patterns/checkered-light-emboss.png");
-  display: flex;
-  flex-direction: column;
+  @include display-column;
 }
 
 .avatar {
