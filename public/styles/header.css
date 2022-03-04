@@ -19,3 +19,15 @@ body > header {
   color: #ffffff;
   background: inherit;
 }
+
+@media screen and (min-width: 1024px) {
+
+  body > header {
+    position: fixed;
+    width: 33.3%;
+    justify-content: center;
+    margin-left: 40px;
+    margin-top: 170px;
+  }
+
+}

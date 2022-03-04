@@ -39,3 +39,13 @@ main {
    display: none;
    padding: 10px;
  }
+
+ @media screen and (min-width: 1024px) {
+
+  .container {
+    width: 66.7%;
+    float: right;
+    padding: 0px 75px;
+  }
+
+ }
