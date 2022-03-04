@@ -48,10 +48,10 @@ const createTweetElement = function (tweetDataObj) {
 // Renders and parses all tweets in the DB array
 const renderTweets = function (tweetData) {
 
-  for (const Obj of tweetData.reverse()) {
-    const renderTweet = createTweetElement(Obj);
+  for (const tweet of tweetData.reverse()) {
+    const renderTweet = createTweetElement(tweet);
     $('#tweet-container').append(renderTweet);
-  }
+  };
 
 };
 
@@ -81,6 +81,10 @@ $(document).ready(function () {
     $('#error').empty();
     $('#error').append(`❌ Error: ${error} ❌`);
     $('#error').css('display', 'inline');
+
+    setTimeout(() => {
+      $('#error').css('display', 'none');
+    }, 2000);
   };
 
   loadTweets();

@@ -14,7 +14,13 @@ nav {
   position: fixed;
   top: 0;
 }
-nav i {
+nav button {
+  color: white;
+  background: none;
+  border: none;
+  padding: 10px 50px;
+}
+nav button:hover {
   color: red;
 }
 
