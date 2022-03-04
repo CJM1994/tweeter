@@ -106,6 +106,7 @@ $(document).ready(function () {
         data: $(this).serialize()
       })
         .then($('form :input').val(''))
+        .then($('.counter').text(140))
         .then(addLatestTweet)
         .catch(function (error) {
           displayError(error);
