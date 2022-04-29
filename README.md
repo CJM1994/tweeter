@@ -4,6 +4,13 @@ Tweeter is a simple, single-page Twitter clone.
 
 I built this project to practice my HTML, CSS, JS, jQuery and AJAX front-end skills, as well as Node and Express back-end skills. Sass was used to manage the CSS in this project.
 
+## Deployed
+This application is now deployed on Heroku to serve as an example of an app I have built with responsive design in mind.
+Try resizing the app to half-screen view to see the alternate display for tablet/phone! 
+
+Link Below:
+https://tweeter-responsive-design.herokuapp.com/
+
 ### Mobile/Tablet View
 !["Screenshot of Mobile/Tablet Layout"](https://github.com/CJM1994/tweeter/blob/master/docs/mobile-view.png)
 ### Laptop/Desktop View
